@@ -11,8 +11,236 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  min-block-size: 320px;
   min-block-size: 100dvb;
+  inline-size: clamp(375px, 100%, 700px);
   font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" var(--main-text-font-weight);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 102px 0;
+}
+
+.header {
+  background-color: #fff;
+  border: 2px solid #000;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 25%)); 
+  padding-top: var(--padding-gorizontal);
+  padding-bottom: var(--padding-gorizontal);
+  padding-left: var(--padding-vertical);
+  padding-right: var(--padding-vertical);
+  margin: 0 auto;
+}
+
+.container__size {
+  width: var(--width-desktop);
+}
+
+.logo-group {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: var(--accent-font);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-weight: normal;
+  color: #000;
+}
+
+.header__title {
+  font-family: var(--accent-font);
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #000;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+
+.card__list {
+  background-color: #fff;
+  
+}
+
+.card__title {
+  padding: 6px 24px 7px 10px;
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  font-variation-settings: "wght" 700;
+  line-height: 100%;
+  color: #000;
+  border: 2px solid #000;
+  border-bottom: 0px solid #000;
+}
+
+.image-container {
+  position: relative;
+}
+
+.card__image {
+  margin-bottom: -4px;
+  width: 100%;
+}
+
+
+.filter-sepia {
+  filter: sepia(40%);
+}
+
+.filter-brightness {
+  filter: brightness(40%);
+}
+
+.filter-contrast {
+  filter: contrast(400%);
+}
+
+.filter-saturate {
+  filter: saturate(250%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(70deg);
+}
+
+.filter-grayscale {
+  filter: grayscale(2);
+}
+
+.filter-invert {
+  filter: invert(0.4);
+}
+
+.double-filter {
+  filter: sepia(1) contrast(3) brightness(200%);
+}
+
+.watermark {
+position: absolute;
+top: 27px;
+right: 28px;
+font-family: var(--accent-font);
+opacity: 50%;
+font-size: 14px;
+font-weight: 400;
+mix-blend-mode: hard-light;
+text-shadow: 1px 1px 0 var(--text-stroke-color),
+-1px -1px 0 var(--text-stroke-color), 
+1px -1px 0 var(--text-stroke-color),
+-1px 1px 0 var(--text-stroke-color);
+}
+
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .watermark {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+  }
+} 
+
+.text__container {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 25px 25px 88px 25px; 
+  font-family: var(--main-font), sans-serif;  
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  border: 2px solid #000;
+  border-top: 0px solid #000;
+  line-height: 21px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: flex-end;
+  align-items: center;
+  margin: -65px 27px 27px 0;
+}
+
+.card__icon-button {
+  block-size: 36px;
+  border: transparent solid 2px;
+  padding: 0;
+  background-color: transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  border: #000 solid 2px;;
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;  
+  background-color: #fff;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+
+.button_decor {
+  position: relative;
+  border: #000 solid 2px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.button_decor::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button_decor:hover::after {
+  transform: scaleX(1);
+}
+
+.button_decor:focus {
+  outline: none;
+}
+
+.button_decor:focus-visible {
+  box-shadow: 2px 2px 0 #000;
+  outline: none;
+}
+
+.button__text { 
+  font-size: 14px;
+  line-height: 90%;
+  font-family: var(--accent-font);
+  letter-spacing: 0px;
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+
+@media (width <=375px) {
+
+
 }
