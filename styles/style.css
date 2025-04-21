@@ -22,17 +22,17 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 102px 0;
+  margin: 0 auto;
 }
 
 .header {
   background-color: #fff;
   border: 2px solid #000;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 25%)); 
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 25%));
   padding-top: var(--padding-gorizontal);
   padding-bottom: var(--padding-gorizontal);
   padding-left: var(--padding-vertical);
   padding-right: var(--padding-vertical);
-  margin: 0 auto;
 }
 
 .container__size {
@@ -41,7 +41,7 @@
 
 .logo-group {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 20px;
   align-items: center;
 }
@@ -71,7 +71,7 @@
 
 .card__list {
   background-color: #fff;
-  
+
 }
 
 .card__title {
@@ -137,7 +137,7 @@ font-size: 14px;
 font-weight: 400;
 mix-blend-mode: hard-light;
 text-shadow: 1px 1px 0 var(--text-stroke-color),
--1px -1px 0 var(--text-stroke-color), 
+-1px -1px 0 var(--text-stroke-color),
 1px -1px 0 var(--text-stroke-color),
 -1px 1px 0 var(--text-stroke-color);
 }
@@ -147,14 +147,14 @@ text-shadow: 1px 1px 0 var(--text-stroke-color),
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
   }
-} 
+}
 
 .text__container {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  padding: 25px 25px 88px 25px; 
-  font-family: var(--main-font), sans-serif;  
+  padding: 25px 25px 88px 25px;
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: #000;
@@ -173,7 +173,7 @@ text-shadow: 1px 1px 0 var(--text-stroke-color),
 }
 
 .card__icon-button {
-  block-size: 36px;
+  block-size: 38px;
   border: transparent solid 2px;
   padding: 0;
   background-color: transparent;
@@ -191,10 +191,7 @@ text-shadow: 1px 1px 0 var(--text-stroke-color),
 
 .card__like-button {
   inline-size: 130px;
-  block-size: 38px;  
-  background-color: #fff;
-  cursor: pointer;
-  border: 2px solid #000;
+  block-size: 38px;
 }
 
 .button_decor {
@@ -228,7 +225,7 @@ text-shadow: 1px 1px 0 var(--text-stroke-color),
   outline: none;
 }
 
-.button__text { 
+.button__text {
   font-size: 14px;
   line-height: 90%;
   font-family: var(--accent-font);
@@ -239,6 +236,19 @@ text-shadow: 1px 1px 0 var(--text-stroke-color),
   color: #fff;
 }
 
+.floppy {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  block-size: 21px;
+  inline-size: 21px;
+  mix-blend-mode: difference;
+}
+
+.save__button {
+  inline-size: 335px;
+  block-size: 51px;
+}
 
 @media (width <=375px) {
 
